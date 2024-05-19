@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Criar pedido";
+}
+
+@model OrderModel
+
+<h2>Adicionar pedido</h2>
+
+<form asp-action="Create" method="post">
+    <fieldset>
+        <label asp-for="STATUS">Status do pedido:</label>
+        <select asp-for="STATUS" class="form-select" required>
+            <option value="PREPARANDO">Preparando</option>
+            <option value="CONCLUIDO">Concluído</option>
+            <option value="CANCELADO">Cancelado</option>
+        </select>
+        <span asp-validation-for="STATUS" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="PRODUCTS">Lista de produtos:</label>
+        <input asp-for="PRODUCTS" class="form-control" required />
+        <span asp-validation-for="PRODUCTS" class="text-danger"></span>
+    </fieldset>
+
+    <div class="form-group mt-2">
+        <button type="submit" class="btn btn-primary">Adicionar pedido</button>
+    </div>
+</form>

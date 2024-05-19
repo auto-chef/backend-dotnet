@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Editar Pedido";
+}
+
+@model OrderModel
+
+<h2>Editar Pedido</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ID" />
+
+    <fieldset>
+        <label asp-for="STATUS">Status do pedido:</label>
+        <select asp-for="STATUS" class="form-select" required>
+            <option value="PREPARANDO">Preparando</option>
+            <option value="CONCLUIDO">Concluído</option>
+            <option value="CANCELADO">Cancelado</option>
+        </select>
+        <span asp-validation-for="STATUS" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="FEEDBACK">Feedback:</label>
+        <input asp-for="FEEDBACK" class="form-control" required />
+        <span asp-validation-for="FEEDBACK" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="RATING">Nota:</label>
+        <input asp-for="RATING" class="form-control" required min="0" max="5" />
+        <span asp-validation-for="RATING" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="PRODUCTS">Lista de produtos:</label>
+        <input asp-for="PRODUCTS" class="form-control" required />
+        <span asp-validation-for="PRODUCTS" class="text-danger"></span>
+    </fieldset>
+
+    <div class="form-group mt-2">
+        <button type="submit" class="btn btn-primary">Editar pedido</button>
+    </div>
+</form>

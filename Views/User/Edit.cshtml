@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Editar usuário";
+}
+
+@model UserModel
+
+<h2>Editar Usuário</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ID" />
+
+    <fieldset>
+        <label asp-for="NAME">Nome:</label>
+        <input asp-for="NAME" class="form-control" required />
+        <span asp-validation-for="NAME" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="CPF">CPF:</label>
+        <input asp-for="CPF" class="form-control" required />
+        <span asp-validation-for="CPF" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="BIRTHDATE">Data de nascimento:</label>
+        <input asp-for="BIRTHDATE" class="form-control" type="date" required />
+        <span asp-validation-for="BIRTHDATE" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="EMAIL">E-mail de acesso:</label>
+        <input asp-for="EMAIL" class="form-control" type="email" required />
+        <span asp-validation-for="EMAIL" class="text-danger"></span>
+    </fieldset>
+
+    <fieldset>
+        <label asp-for="PASSWORD">Senha de acesso:</label>
+        <input asp-for="PASSWORD" class="form-control" type="password" required />
+        <span asp-validation-for="PASSWORD" class="text-danger"></span>
+    </fieldset>
+
+    <div class="form-group mt-2">
+        <button type="submit" class="btn btn-primary">Editar usuário</button>
+    </div>
+</form>

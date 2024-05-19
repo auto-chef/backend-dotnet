@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Pedidos";
+}
+
+@model List<OrderModel>
+
+<h2>Pedidos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Status</th>
+            <th>Produtos</th>
+            <th>Feedback</th>
+            <th>Nota</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.ID</td>
+                <td>@order.STATUS</td>
+                <td>@order.PRODUCTS</td>
+                <td>@order.FEEDBACK</td>
+                <td>@order.RATING</td>
+                <td>
+                    <a asp-controller="Order" asp-action="Edit" asp-route-ID="@order.ID">Editar</a>
+                    <a asp-controller="Order" asp-action="Delete" asp-route-ID="@order.ID">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Order" asp-action="Create">Criar pedido</a>
