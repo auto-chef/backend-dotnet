@@ -22,10 +22,10 @@ Você pode acessar o [vídeo pitch de apresentação do projeto](https://www.you
 
 ## Telas da aplicação
 ### 📜 Pedidos
-<video src='.github/features/Pedidos.mp4' width="100%"></video>
+https://github.com/auto-chef/backend-dotnet/assets/53922235/bfd7de69-0f40-4ff5-9db7-0fb5ab0b49f6
 
 ### 🍔 Restaurantes
-<video src='.github/features/Restaurantes.mp4' width="100%"></video>
+https://github.com/auto-chef/backend-dotnet/assets/53922235/2426f6a4-fb56-48dd-baa9-6611ee62c0e1
 
 ### 👥 Usuários
-<video src='.github/features/Usuarios.mp4' width="100%"></video>
+https://github.com/auto-chef/backend-dotnet/assets/53922235/c28010f0-c627-4b68-9b81-602a390be496
